@@ -1,0 +1,13 @@
+
+  E = {}
+  fh = open('file1.txt')
+  fh.readline()   # Line1
+  for line1 in fh:
+      line1 = line1.strip().split()
+      char1 = line1[0]
+      m = int(line1[1])    
+      if char1.isalpha():
+          if char1 in E:
+              E[char1] += m
+          else:
+              E[char1] = m
